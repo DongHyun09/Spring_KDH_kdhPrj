@@ -9,24 +9,18 @@
     <table>
         <thead>
             <tr>
+               <th>구분</th>
                 <th>이름</th>
                 <th>나이</th>
                 <th>직업</th>
                 <th>관계</th>
                 <th>특징</th>
-                <th>나에게 있어서</th>
-                <th>구분</th>
+                <th>나에게 있어서</th>          
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><input type="text" name="name"></td>
-                <td><input type="number" name="age"></td>
-                <td><input type="text" name="job"></td>
-                <td><input type="text" name="relation"></td>
-                <td><input type="text" name="forme"></td>
-                <td><textarea name="forme2"></textarea></td>
-                <td>
+                  <td>
                     <select name="dv">
                         <option value="F">가족</option>
                         <option value="C">동료</option>
@@ -34,6 +28,12 @@
                         <option value="K">지인</option>
                     </select>
                 </td>
+                <td><input type="text" name="name"></td>
+                <td><input type="number" name="age"></td>
+                <td><input type="text" name="job"></td>
+                <td><input type="text" name="relation"></td>
+                <td><input type="text" name="forme"></td>
+                <td><textarea name="form2"></textarea></td>          
             </tr>
         </tbody>
     </table>

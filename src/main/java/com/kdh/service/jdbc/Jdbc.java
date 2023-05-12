@@ -16,17 +16,17 @@ public class Jdbc implements PeopleService {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-//	@Override
-//	public int insertThem(People p) {
-//		String insert = "insert into human_tbl values(?,?,?,?,?,?,?)";
-//		Object[] put = {p.getName(),p.getAge(),p.getJob(),p.getRelation(),p.getForme(),p.getForm2(),p.getDv()};
-//		int add = jdbcTemplate.update(insert, put);
-//		return add;
-//	}
-//	
+	@Override
+	public int insertThem(People p) {
+		String insert = "insert into human_tbl values(?,?,?,?,?,?,?)";
+		Object[] put = {p.getName(),p.getAge(),p.getJob(),p.getRelation(),p.getForme(),p.getForm2(),p.getDv()};
+		int add = jdbcTemplate.update(insert, put);
+		return add;
+	}
+	
 	@Override
 	public List<People> findAll() {
-		String sql = "select * from human_tbl";		
+		String sql = "select * from dv_view";		
 		List<People> list = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(People.class));
 		
 		return list;

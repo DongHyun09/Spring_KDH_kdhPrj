@@ -7,5 +7,5 @@ import com.kdh.entity.People;
 public interface PeopleService {
 	
 	List<People> findAll();
-//	int insertThem(People p);
+	int insertThem(People p);
 }

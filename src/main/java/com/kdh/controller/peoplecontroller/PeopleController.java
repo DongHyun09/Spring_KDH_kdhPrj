@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -25,16 +26,15 @@ public class PeopleController {
 			model.addAttribute("List",list);
 			return "peop.all.list";
 		}
-}
-//		
-//		@GetMapping("add")
-//		public String add(Model model) {
-//			return "peop.all.add";
-//		}
-//		
-//		 @PostMapping("add")
-//		    public String add(People pe) {
-//			psv.insertThem(pe);		 
-//		        return "redirect:list";
-//		    }
-//		}
+		
+		@GetMapping("add")
+		public String add() {
+			return "peop.all.add";
+		}
+		
+		 @PostMapping("add")
+		    public String add(@ModelAttribute People pe) {
+			psv.insertThem(pe);		 
+		        return "redirect:list";
+		    }
+		}

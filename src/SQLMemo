@@ -1,0 +1,23 @@
+view table
+
+create view dv_view as 
+select name,age,job,relation,forme,forme2, 
+case when dv = 'F' then '가족' when dv = 'C' then '동료'
+when dv = 'R' then '친구' when dv = 'K' then '지인' else dv end as dv
+from human_tbl; 
+
+
+SQL> desc human_tbl;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(20)
+ AGE                                                NUMBER(3)
+ JOB                                                VARCHAR2(20)
+ RELATION                                           VARCHAR2(20)
+ FORME                                              VARCHAR2(1000)
+ FORME2                                             VARCHAR2(2000)
+ DV                                                 VARCHAR2(10)
+ 
+ 
+ 
+ 
