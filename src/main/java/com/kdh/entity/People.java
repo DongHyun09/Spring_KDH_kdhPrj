@@ -9,7 +9,16 @@ public class People {
 	    private String forme;
 	    private String form2;
 	    private String dv;
+	    private int num;
+	    
+	    
 	    	    		    	   	    
+		public int getNum() {
+			return num;
+		}
+		public void setNum(int num) {
+			this.num = num;
+		}
 		public String getDv() {
 			return dv;			
 		}		

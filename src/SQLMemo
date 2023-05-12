@@ -1,13 +1,16 @@
-view table
+Oracle OracleSql 
+table
+
+dv_view
 
 create view dv_view as 
-select name,age,job,relation,forme,forme2, 
+select num, name,age,job,relation,forme,forme2, 
 case when dv = 'F' then '가족' when dv = 'C' then '동료'
 when dv = 'R' then '친구' when dv = 'K' then '지인' else dv end as dv
 from human_tbl; 
 
 
-SQL> desc human_tbl;
+human_tbl;
  Name                                      Null?    Type
  ----------------------------------------- -------- ----------------------------
  NAME                                               VARCHAR2(20)

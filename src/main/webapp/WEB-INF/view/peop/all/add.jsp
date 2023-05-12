@@ -9,7 +9,8 @@
     <table>
         <thead>
             <tr>
-               <th>구분</th>
+            	<th>번호</th>
+               	<th>구분</th>
                 <th>이름</th>
                 <th>나이</th>
                 <th>직업</th>
@@ -19,8 +20,9 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                  <td>
+            <tr> 
+            	  <td> <input type="text" name="num" value="${NUM}" readonly></td>
+            	  <td>
                     <select name="dv">
                         <option value="F">가족</option>
                         <option value="C">동료</option>

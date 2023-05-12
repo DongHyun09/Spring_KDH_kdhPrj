@@ -28,13 +28,15 @@ public class PeopleController {
 		}
 		
 		@GetMapping("add")
-		public String add() {
+		public String add(Model model) {
+			 int num = psv.getNum() + 1;
+			 model.addAttribute("NUM", num);
 			return "peop.all.add";
 		}
 		
-		 @PostMapping("add")
-		    public String add(@ModelAttribute People pe) {
-			psv.insertThem(pe);		 
+		@PostMapping("add")
+		    public String add(@ModelAttribute People pe) {			
+			 psv.insertThem(pe);		 
 		        return "redirect:list";
 		    }
 		}

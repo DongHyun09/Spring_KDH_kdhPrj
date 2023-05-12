@@ -16,12 +16,22 @@ public class Jdbc implements PeopleService {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
+	
+	
 	@Override
 	public int insertThem(People p) {
-		String insert = "insert into human_tbl values(?,?,?,?,?,?,?)";
-		Object[] put = {p.getName(),p.getAge(),p.getJob(),p.getRelation(),p.getForme(),p.getForm2(),p.getDv()};
-		int add = jdbcTemplate.update(insert, put);
+		
+		String insert = "insert into human_tbl values(?,?,?,?,?,?,?,?)";
+		Object[] put = {p.getName(),p.getAge(),p.getJob(),p.getRelation(),p.getForme(),p.getForm2(),p.getDv(),p.getNum()};
+		int add = jdbcTemplate.update(insert, put);		
 		return add;
+	}
+	
+	@Override
+	public Integer getNum() {
+	    String sql = "SELECT MAX(num) FROM human_tbl";
+	    int num = jdbcTemplate.queryForObject(sql, int.class);
+	    return num;
 	}
 	
 	@Override
