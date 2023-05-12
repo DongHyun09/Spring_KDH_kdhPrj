@@ -1,7 +1,7 @@
 Oracle OracleSql 
 table
 
-dv_view
+<dv_view>
 
 create view dv_view as 
 select num, name,age,job,relation,forme,forme2, 
@@ -9,18 +9,15 @@ case when dv = 'F' then '가족' when dv = 'C' then '동료'
 when dv = 'R' then '친구' when dv = 'K' then '지인' else dv end as dv
 from human_tbl; 
 
+<human_tbl>
 
-human_tbl;
- Name                                      Null?    Type
- ----------------------------------------- -------- ----------------------------
- NAME                                               VARCHAR2(20)
- AGE                                                NUMBER(3)
- JOB                                                VARCHAR2(20)
- RELATION                                           VARCHAR2(20)
- FORME                                              VARCHAR2(1000)
- FORME2                                             VARCHAR2(2000)
- DV                                                 VARCHAR2(10)
+create table human_tbl(name varchar2(20), age number(3),
+job varchar2(20), relation varchar2(20), forme varchar2(1000),
+forme2 varchar2(2000),dv varchar2(10), num number(10));
+
  
+ 5/13~14
+ 1.히든으로 식별번호(고유아이디) 부여, 식별번호 클릭시 디테일. -> 수정, 삭제
+ 2.글번호도 따로 추가.
  
- 
- 
+ FIN
