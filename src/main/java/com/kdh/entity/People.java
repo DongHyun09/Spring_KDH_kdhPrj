@@ -7,12 +7,19 @@ public class People {
 	    private String job;
 	    private String relation;
 	    private String forme;
-	    private String form2;
+	    private String forme2;
 	    private String dv;
 	    private int num;
 	    
 	    
-	    	    		    	   	    
+	    
+	    
+		public String getForme2() {
+			return forme2;
+		}
+		public void setForme2(String forme2) {
+			this.forme2 = forme2;
+		}
 		public int getNum() {
 			return num;
 		}
@@ -24,14 +31,7 @@ public class People {
 		}		
 		public void setDv(String dv) {
 			this.dv = dv;
-		}
-		
-		public String getForm2() {
-			return form2;
-		}
-		public void setForm2(String form2) {
-			this.form2 = form2;
-		}
+		}		
 		public String getName() {
 			return name;
 		}

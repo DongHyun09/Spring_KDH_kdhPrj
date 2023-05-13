@@ -9,4 +9,6 @@ public interface PeopleService {
 	List<People> findAll();
 	int insertThem(People p);
 	Integer getNum();
+	People findByNum(int num);
+	int updatePeople(People p);
 }

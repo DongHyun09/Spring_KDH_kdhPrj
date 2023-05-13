@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.kdh.entity.People;
 import com.kdh.service.PeopleService;
@@ -39,4 +40,23 @@ public class PeopleController {
 			 psv.insertThem(pe);		 
 		        return "redirect:list";
 		    }
+		@RequestMapping("detail")
+		public String detail(@RequestParam("num") int num, Model model) {
+		    People people = psv.findByNum(num);
+		    model.addAttribute("People", people);
+		    return "peop.all.detail";
 		}
+		  @GetMapping("update")
+		    public String update(@RequestParam("num") int num, Model model) {
+		        People people = psv.findByNum(num);
+		        model.addAttribute("People", people);
+		        return "peop.all.update";
+		    }
+
+		    @PostMapping("update")
+		    public String update(@ModelAttribute People updatedPeople) {
+		        psv.updatePeople(updatedPeople);
+		        return "redirect:list";
+		    }
+
+	}

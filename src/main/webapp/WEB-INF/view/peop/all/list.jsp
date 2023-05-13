@@ -12,7 +12,6 @@
 <table border="1">
     <thead>
         <tr>
-        	<th>번 호</th>
         	<th>구 분</th>
             <th>이 름</th>
             <th>나 이</th>
@@ -24,9 +23,8 @@
     <tbody>
         <c:forEach var="list" items="${List}">
                 <tr>
-                	<td>${list.num}</td>
                 	<td>${list.dv}</td>
-                    <td>${list.name}</td>
+                    <td><a href="detail?num=${list.num}">${list.name}</a></td>
                     <td>${list.age}</td>
                     <td>${list.job}</td>
                     <td>${list.relation}</td>
